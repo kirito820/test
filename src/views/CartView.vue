@@ -32,7 +32,7 @@ export default {
             <el-table-column label="数量" prop="amount"/>
             <el-table-column>
                 <template #header>小计</template>
-                <template #default>如之奈何？</template>
+                <template #default="{row}">{{row.price*row.amount}}</template>
             </el-table-column>
         </el-table>
         <p>总价: {{ totalPrice }}</p>
